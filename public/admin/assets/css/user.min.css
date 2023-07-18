@@ -1,0 +1,10 @@
+.text-orange {
+  color: #e5780b;
+}
+
+.nav-text {
+  display: block;
+  padding: var(--phoenix-nav-link-padding-y) var(--phoenix-nav-link-padding-x);
+  font-size: var(--phoenix-nav-link-font-size);
+  font-weight: var(--phoenix-nav-link-font-weight);
+}
