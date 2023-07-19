@@ -10,6 +10,7 @@ const config = {
 
 
 const db = require('../models')
+const controllers = require('../controllers')
 
 router.use(config.session)
 
@@ -17,6 +18,29 @@ router.get('/', (req, res) => res.redirect('/admin/dashboard'))
 
 router.get('/dashboard', (req, res) => {
 	res.render('admin/pages/dashboard')
+})
+
+router.get('/forums', async (req, res) => {
+	let forums = await controllers.forum.list.listAllInOrderNested()
+	res.render('admin/pages/manage-forums', {
+		data: {
+			forums: forums
+		}
+	})
+})
+router.get('/forums/new', async (req, res) => {
+	let forums = await controllers.forum.list.listAll()
+	res.render('admin/pages/new-forum', {
+		data: {
+			forumList: forums
+		}
+	})
+})
+
+
+router.post('/forums/new', async (req, res) => {
+	let result = await controllers.forum.create(req.body.forumName, req.body.forumDescription, req.body.forumType, req.body.parentForum, req.body.forumDisplayOrder)
+	res.redirect('/admin/forums')
 })
 
 router.get('/express-login/:userId', async (req, res) => {

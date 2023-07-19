@@ -15,7 +15,7 @@ const NavbarVertical = (props) => {
 						<li className='nav-item'>
 							<div className='nav-item-wrapper'>
 								<a
-									className='nav-link label-1 active'
+									className='nav-link label-1 nav-single'
 									href='/admin/dashboard'
 								>
 									<div className='d-flex align-items-center'>
@@ -128,6 +128,18 @@ const NavbarVertical = (props) => {
 											>
 												<div className='d-flex align-items-center'>
 													<span className='nav-link-text'>Manage Forums</span>
+												</div>
+											</a>
+										</li>
+										<li className='nav-item'>
+											<a
+												className='nav-link'
+												href='/admin/forums/new'
+												data-bs-toggle=''
+												aria-expanded='false'
+											>
+												<div className='d-flex align-items-center'>
+													<span className='nav-link-text'>New Forum</span>
 												</div>
 											</a>
 										</li>

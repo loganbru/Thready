@@ -25169,7 +25169,7 @@ h3,
 	background-color: var(--phoenix-white) !important;
 }
 .form-label {
-	padding-left: 1rem;
+	padding-left: 0rem;
 	line-height: 1.2;
 	text-transform: uppercase;
 	margin-bottom: 0;
