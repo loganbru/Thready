@@ -7,15 +7,40 @@ const ManageForums = (props) => {
 	return (
 		<Admin>
 			<div className='row'>
-				<div className='col-12'>
-					<ul className='list-group'>
+				<div className='col-12 col-lg-10 col-xl-8'>
+					<div className='card'>
+						<div className='card-body'>
+							<table className='table table-borderless'>
+								<thead>
+									<tr>
+										<th scope='col' className='text-start' width='80%'></th>
+										<th scope='col' className='text-end' width='20%'></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Master Forum</td>
+										<td className='text-end'>
+											<button
+												className='btn btn-phoenix-primary btn-sm me-1 mb-1'
+												type='button'
+											>
+												Edit
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					{/* <ul className='list-group'>
 						{forums.map((forum, index) => (
 							<ForumTreeItem
 								forum={forum}
 								key={index}
 							/>
 						))}
-					</ul>
+					</ul> */}
 				</div>
 			</div>
 		</Admin>
